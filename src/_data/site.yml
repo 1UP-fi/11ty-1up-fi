@@ -4,5 +4,5 @@ url: https://1up.fi
 feed: feed://1up.fi/feed.xml
 lang: en-US
 logo: /logo.svg
-color: "#0C9"
+color: "#00CC99"
 issues: https://github.com/1UP-fi/11ty-1UP-fi/issues
