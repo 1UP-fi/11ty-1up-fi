@@ -20,7 +20,7 @@ content as opposed to fighting the architecture.
 The transition should be fairly seamless, though there may be some minor issues.
 If you notice anything broken --- try clearing your browser's cache --- if that
 doesn't work then report the issue on [GitHub]({{ site.issues }}).
-If the [feed](feed:/feed.xml) stops updating, unsubscribe and resubscribe.
+If the [feed]({{ site.feed }}) stops updating, unsubscribe and resubscribe.
 Finally, if you don't experience any issues, then there is no need to do
 anything.
 

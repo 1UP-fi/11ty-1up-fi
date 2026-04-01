@@ -1,6 +1,7 @@
 title: 1UP.fi
 description: A kitchen sink for all my programming projects.
 url: https://1up.fi
+feed: feed://1up.fi/feed.xml
 lang: en-US
 logo: /logo.svg
 color: "#0C9"

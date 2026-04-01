@@ -19,4 +19,4 @@
 - "Works on my machine."
 - "You found the splash text!"
 - "You say a queer coded this?"
-- "Make sure to <a href='feed:/feed.xml'>subscribe</a>!"
+- "Make sure to <a href='{{ site.feed }}'>subscribe</a>!"

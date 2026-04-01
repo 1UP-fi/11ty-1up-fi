@@ -6,7 +6,7 @@ layout: feed
 # Posts
 
 Here you can find all the posts that have been written thus far;<br>
-Alternatively, you can [subscribe](feed:/feed.xml)
+Alternatively, you can [subscribe]({{ site.feed }})
 with your aggregator of choice.
 
 <ul>

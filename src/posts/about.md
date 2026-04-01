@@ -32,7 +32,7 @@ If those types of things sound interesting to you, then stick around and explore
 at your leisure. None of the annoyances of the modern web will bother you here,
 so feel free to keep your ad blocker turned on, and if all you're here for is
 the articles then feel free to disable JavaScript as well.
-Alternatively, you can [subscribe](feed:/feed.xml)
+Alternatively, you can [subscribe]({{ site.feed }})
 with your aggregator of choice.
 
 *[AI]: Artificial Intelligence
