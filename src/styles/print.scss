@@ -1,0 +1,52 @@
+@page {
+    margin: 1.5cm 2.0cm;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+body {
+    display: initial;
+
+    >main {
+        display: contents;
+    }
+
+    >header, >footer, nav {
+        display: none;
+    }
+}
+
+* {
+    color: initial;
+}
+
+a {
+    color: #00E;
+    text-decoration: underline;
+
+    &::after {
+        content: " <" attr(href) ">";
+    }
+}
+
+a * {
+    color: inherit;
+}
+
+li {
+    break-inside: avoid;
+}
+
+blockquote {
+    border-color: #888;
+}
+
+.footnote, .reversefootnote {
+    color: #00E !important;
+
+    &::after {
+        content: "";
+    }
+}

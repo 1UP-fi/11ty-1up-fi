@@ -1,0 +1,103 @@
+@use "syntax";
+
+article {
+    display: contents;
+    text-align: justify;
+}
+
+article>p:first-of-type:first-letter {
+    float: inline-start;
+    font-family: "Roboto Slab", monospace;
+    font-weight: 700;
+    font-size: 2.1lh;
+    margin-right: .2rem;
+    margin-top: .35rem;
+    line-height: .67;
+    color: var(--heading);
+}
+
+@scope (article) {
+
+    header>h1 {
+        margin-bottom: 0.1lh;
+    }
+
+    nav {
+        display: grid;
+        grid-column: breakout;
+        margin-block: 1rlh;
+
+        h2 {
+            margin: 0;
+        }
+
+        li {
+            margin: 0;
+        }
+
+        a {
+            display: block;
+            margin-top: .5lh;
+            text-decoration: none;
+            width: fit-content;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        a[href="#"] {
+            display: none;
+        }
+
+        ol {
+            list-style: none;
+        }
+
+        >ol {
+            padding: 0;
+        }
+
+        >* {
+            grid-column: content;
+        }
+    }
+
+    @media (min-width: 160ch) {
+        nav {
+            grid-column: left;
+            grid-row: 1 / 9999;
+            height: fit-content;
+            position: sticky;
+            margin-top: 2rlh;
+            top: 1rlh;
+            width: fit-content;
+            overflow-y: scroll;
+            max-height: 80svh;
+
+            a[href="#"] {
+                display: initial;
+            }
+        }
+    }
+
+    .footnote-ref>a, .footnote-ref>a:visited, .footnote-backref, .footnote-backref:visited {
+        color: var(--accent);
+        text-decoration: none;
+    }
+
+    footer {
+        dl, dt, dd {
+            display: inline;
+        }
+
+        > ol {
+            list-style-position: inside;
+            padding: 0;
+        }
+
+        li > p {
+            display: inline;
+        }
+    }
+}

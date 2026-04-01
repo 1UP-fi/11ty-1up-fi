@@ -1,0 +1,30 @@
+main svg {
+    animation: flip 1s ease;
+}
+
+h1::after {
+    content: "/";
+    animation: blink 2s linear infinite;
+}
+
+@keyframes blink {
+    25% {
+        background-color: var(--bg);
+        color: var(--heading);
+    }
+
+    75% {
+        background-color: var(--heading);
+        color: var(--bg);
+    }
+}
+
+@keyframes flip {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}

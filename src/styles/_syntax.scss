@@ -1,0 +1,66 @@
+@layer syntax {
+
+    pre[class*="language-"] {
+        background-color: #8882;
+        padding-inline: 1ch;
+        padding-block: .5lh;
+        margin-bottom: 1lh;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        opacity: 0.5;
+    }
+
+    .token.atrule-id,
+    .token.atrule,
+    .token.attr-name,
+    .token.attr-value,
+    .token.boolean,
+    .token.control,
+    .token.directive,
+    .token.entity,
+    .token.function,
+    .token.important,
+    .token.keyword,
+    .token.namespace,
+    .token.number,
+    .token.placeholder,
+    .token.property,
+    .token.regex,
+    .token.selector,
+    .token.statement,
+    .token.string,
+    .token.tag-id,
+    .token.tag,
+    .token.unit,
+    .token.url,
+    .token.variable {
+        color: var(--accent);
+    }
+
+    .token.deleted {
+        text-decoration: line-through;
+    }
+
+    .token.inserted {
+        border-bottom: 1px dotted #ebf4ff;
+        text-decoration: none;
+    }
+
+    .token.italic {
+        font-style: italic;
+    }
+
+    .token.important,
+    .token.bold {
+        font-weight: bold;
+    }
+
+    .token.entity {
+        cursor: help;
+    }
+
+}

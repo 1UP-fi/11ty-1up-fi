@@ -1,0 +1,15 @@
+<address>Bluesky: <a href="https://bsky.app/profile/{{ authors["1UP"].bsky }}">@{{ authors["1UP"].bsky }}</a></address>
+<address>Found an issue? <a href="{{ site.issues }}">Report it on GitHub.</a></address>
+<aside>
+    <q id="splash">
+        {% if layout == 'error' %}
+            To err is human.
+        {% else %}
+            <noscript>Keeping it static!</noscript>
+            <script type="module" src="/scripts/easter.js"></script>
+        {% endif %}
+    </q>
+    <a rel="license" href="/about#license">
+        <small>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</small>
+    </a>
+</aside>

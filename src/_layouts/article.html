@@ -1,0 +1,28 @@
+---
+layout: default
+styles:
+    - href: /styles/article.css
+---
+<article>
+    <header>
+        <hgroup>
+            <h1>{{ title }}</h1>
+            <p>
+                {{ subtitle }}
+                {% if subtitle != nil %}&mdash;{% endif %}
+                <time datetime="{{ date | date_to_xmlschema }}">
+                    {{ date | date_to_string }}
+                </time>
+                &mdash;
+                <a rel="author" href="{{ authors[author].url }}">{{ author }}</a>
+            </p>
+        </hgroup>
+        {{ abstract }}
+    </header>
+    <nav>
+        <h2>Contents</h2>
+        <a href="#">(Top)</a>
+        {{ content | toc: '{"wrapper":""}' }}
+    </nav>
+    {{ content }}
+</article>

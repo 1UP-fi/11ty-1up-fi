@@ -1,0 +1,213 @@
+@use "reset";
+@use "fonts";
+@use "colors";
+
+@layer global {
+    @property --theme {
+        syntax: '<color>';
+        initial-value: #0C9;
+        inherits: true;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        :root {
+            transition: --theme 1s;
+        }
+    }
+
+    :root {
+        @include colors.colors;
+        scrollbar-color: var(--muted) var(--bg);
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--fg);
+        font-family: "Roboto",sans-serif;
+        
+        display: grid;
+        gap: 1rlh;
+        padding-inline: 1rem;
+        column-gap: min(1rem, calc(2vw - 1rem));
+        
+        grid-template-rows:
+            [header] auto
+            [main] 1fr
+            [footer] auto;
+
+        grid-template-columns:
+            1fr
+            [fullwidth-start left]
+                minmax(0, 30ch)
+                [breakout-start]
+                    minmax(0, 2rem)
+                        [content] min(80ch,100%)
+                    minmax(0, 2rem)
+                [breakout-end right]
+                minmax(0, 30ch)
+            [fullwidth-end]
+            1fr;
+
+        * {
+            grid-template-columns: subgrid;
+        }
+
+        >header, >footer {
+            display: grid;
+            grid-column: fullwidth;
+            border-image-source: radial-gradient(circle, var(--accent), var(--bg));
+            border-image-slice: 1;
+            padding-block: 1rlh;
+        }
+
+        >header {
+            grid-row: header;
+            border-bottom: .15rem solid;
+            align-items: center;
+            display: flex;
+            gap: 1rlh;
+
+            >a>svg {
+                height: 3rlh;
+                width: auto;
+                stroke: var(--theme);
+            }
+
+            nav {
+                flex-grow: 1;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 6ch);
+                gap: 1rlh;
+
+                a, a:visited {
+                    color: var(--accent);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+
+        >main {
+            display: grid;
+            grid-row: main;
+            grid-column: fullwidth;
+            place-content: start;
+
+            * {
+                grid-column: content;
+            }
+        }
+
+        >footer {
+            grid-row: footer;
+            border-top: .15rem solid;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            place-content: center;
+            text-align: center;
+            margin-top: 2rlh;
+
+            @media (max-width: 100ch) {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+        font-family: "Roboto Slab", sans-serif;
+        color: var(--heading);
+        margin-block: 1rlh;
+    }
+
+    h1 {
+        font-size: 250%;
+    }
+
+    p {
+        margin-bottom: 1lh;
+    }
+
+    q {
+        color: var(--accent);
+    }
+
+    a {
+        color: var(--accent);
+
+        &:visited {
+            color: var(--muted);
+        }
+
+        &:focus, &:hover, &.current {
+            text-decoration: underline;
+        }
+
+        &:active, &.current {
+            font-weight: 700;
+        }
+    }
+
+    pre {
+        font-family: "Roboto Mono",monospace;
+        overflow-x: auto;
+    }
+
+    blockquote {
+        border-left: .3em solid var(--muted);
+        margin-bottom: 1lh;
+        padding: .5lh;
+
+        p {
+            display: inline;
+        }
+    }
+
+    th, td {
+        border: 0.1rem solid var(--fg);
+        line-height: 1;
+        padding: 1lh 1ch;
+    }
+
+    hr {
+        color: var(--muted);
+        height: 0.1rem;
+    }
+
+    dt {
+        font-weight: 700;
+
+        &::after {
+            content: ": ";
+        }
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    table {
+        width: fit-content;
+        place-self: center;
+        margin-bottom: 1lh;
+    }
+
+    thead {
+        color: var(--bg);
+        background: var(--muted);
+    }
+
+    th, td {
+        padding-block: .5lh;
+        padding-inline: min(2em, 5vw);
+        border: none;
+    }
+
+    tr:nth-child(even) td {
+        background: #8884;
+    }
+
+    li {
+        margin-bottom: 1lh;
+    }
+}

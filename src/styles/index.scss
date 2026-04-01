@@ -1,0 +1,19 @@
+main {
+    text-align: center;
+    place-content: center;
+
+    svg {
+        stroke: var(--theme);
+        height: 8rem;
+        margin: auto;
+    }
+
+    h1+p {
+        margin-bottom: 0;
+        text-wrap: balance
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+}

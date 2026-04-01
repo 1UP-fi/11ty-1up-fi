@@ -1,0 +1,29 @@
+@mixin colors {
+
+    --bg: light-dark(
+        hsl(from var(--theme) h calc(s / 2) 95%),
+        hsl(0 0% 0%)
+    );
+
+    --fg: light-dark(
+        hsl(0 0% 0%),
+        hsl(0 0% 100%)
+    );
+
+    --accent: light-dark(
+        hsl(from var(--theme) h s 30%),
+        hsl(from var(--theme) h s 60%)
+    );
+
+    --heading: light-dark(
+        hsl(from var(--theme) h s 30%),
+        var(--theme)
+    );
+
+    --muted: light-dark(
+        hsl(from var(--theme) h calc(s / 2) 35%),
+        hsl(from var(--theme) h s 25%)
+    );
+
+    color-scheme: light dark;
+}

@@ -1,0 +1,6 @@
+<svg fill="none" stroke="#0C9" stroke-linecap="square" viewBox=".5 .5 16 16" xmlns="http://www.w3.org/2000/svg">
+    <g id="root">
+        <path id="a" d="M2,2h1v10h3-4m0,3h0m2,0h2V2h3v3H8m0,3h1v1h-1"/>
+        <use href="#a" transform="rotate(180,8.5,8.5)"/>
+    </g>
+</svg>

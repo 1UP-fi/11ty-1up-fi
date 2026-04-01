@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "splashes.yml": "markdown",
+        "splashes.txt": "liquid",
+        "*.html": "liquid"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        ".sass-cache": true,
+        "node_modules": true,
+        "package-lock.json": true,
+        "CNAME": true
+    }
+}

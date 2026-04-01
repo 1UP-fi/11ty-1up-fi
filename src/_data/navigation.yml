@@ -1,0 +1,9 @@
+# Trailing slashes are important for current page matching
+- name: Index
+  url: /
+- name: Posts
+  url: /posts/
+- name: Tools
+  url: /tools/
+- name: About
+  url: /about/

@@ -1,0 +1,15 @@
+id: /
+short_name: 1UP.fi
+name: 1UP.fi
+icons:
+  - src: /logo.svg
+    sizes: any
+    type: image/svg+xml
+start_url: /
+display: standalone
+theme_color: "#0C9"
+background_color: "#000"
+orientation: natural
+shortcuts:
+  - name: Posts
+    url: /posts
