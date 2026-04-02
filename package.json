@@ -12,15 +12,14 @@
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "eleventy-plugin-toc": "^1.1.5",
+    "markdown-it": "^14.1.1",
     "markdown-it-abbr": "^2.0.0",
     "markdown-it-anchor": "^9.2.0",
     "markdown-it-attrs": "^4.3.1",
     "markdown-it-footnote": "^4.0.0",
     "minify": "^15.2.0",
     "sass": "^1.98.0",
-    "typescript": "^6.0.2"
-  },
-  "dependencies": {
+    "typescript": "^6.0.2",
     "yaml": "^2.8.3"
   }
 }

@@ -11,6 +11,7 @@ import pluginHighLight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginTOC from "eleventy-plugin-toc";
 import ts from "typescript";
 import YAML from "yaml";
+import markdownIt from "markdown-it";
 
 const site = YAML.parse(fs.readFileSync('./src/_data/site.yml', 'utf8'));
 
@@ -41,19 +42,23 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginHighLight);
 
     // Define Markdown behavior
-    eleventyConfig.amendLibrary("md", md => {
-        // Add some Markdown extensions
-        md.use(markdownItAnchor);
-        md.use(markdownItAbbr);
-        md.use(markdownItAttrs);
-
-        md.use(markdownItFootnote);
-        // Define custom container for footnotes
-        md.renderer.rules.footnote_block_open = () => "<footer><h2 id='footnotes'>Footnotes</h2><ol class='footnotes-list'>";
-        // Replace character used for footnote backlinks
-        let anchorRenderer = md.renderer.rules.footnote_anchor;
-        md.renderer.rules.footnote_anchor = (...args) => anchorRenderer(...args).replace('\u21a9\uFE0E', '^');
+    let md = new markdownIt({
+        typographer: true,
     });
+    
+    // Add some Markdown extensions
+    md.use(markdownItAnchor);
+    md.use(markdownItAbbr);
+    md.use(markdownItAttrs);
+
+    md.use(markdownItFootnote);
+    // Define custom container for footnotes
+    md.renderer.rules.footnote_block_open = () => "<footer><h2 id='footnotes'>Footnotes</h2><ol class='footnotes-list'>";
+    // Replace character used for footnote backlinks
+    let anchorRenderer = md.renderer.rules.footnote_anchor;
+    md.renderer.rules.footnote_anchor = (...args) => anchorRenderer(...args).replace('\u21a9\uFE0E', '^');
+
+    eleventyConfig.setLibrary("md", md);
 
     // Add support for taking an excerpt of a post
     eleventyConfig.setFrontMatterParsingOptions({
