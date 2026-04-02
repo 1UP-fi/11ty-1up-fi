@@ -15,7 +15,7 @@ content as opposed to fighting the architecture.
 
 <!--endx-->
 
-## What this Means for You
+## What this means for you
 
 The transition should be fairly seamless, though there may be some minor issues.
 If you notice anything broken --- try clearing your browser's cache --- if that
@@ -24,7 +24,7 @@ If the [feed]({{ site.feed }}) stops updating, unsubscribe and resubscribe.
 Finally, if you don't experience any issues, then there is no need to do
 anything.
 
-## Quick Unrelated PSA
+## Quick unrelated PSA
 
 **Remember to make frequent backups!!!** I actually lost the first attempt at
 migration to my own human error by permanently deleting the entire migration
@@ -36,7 +36,7 @@ copy stored safely offsite or in the cloud. You'll avoid a lot of headaches in
 the future that way and won't have to pull an all-nighter waiting for recovery
 software to find a fraction of the stuff you lost.
 
-## Amusing tangent
+## Amusing Tangent
 
 As if this entire article wasn't already a kind of testament to my
 misguidedness, I'll show you all an example of just how poorly thought out the
