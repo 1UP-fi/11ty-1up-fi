@@ -36,7 +36,7 @@ copy stored safely offsite or in the cloud. You'll avoid a lot of headaches in
 the future that way and won't have to pull an all-nighter waiting for recovery
 software to find a fraction of the stuff you lost.
 
-## Amusing Tangent
+## Amusing tangent
 
 As if this entire article wasn't already a kind of testament to my
 misguidedness, I'll show you all an example of just how poorly thought out the
