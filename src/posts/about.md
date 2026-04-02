@@ -71,7 +71,6 @@ Regards, [@{{ author.bsky }}](https://bsky.app/profile/{{ author.bsky }}){: rel=
 
 {% include "LICENSE.txt" %}
 
-[^1]: Everything but the kitchen sink
-    : (idiomatic) Almost everything, whether needed or not.
+[^1]: <dl><dt>Everything but the kitchen sink</dt><dd>(idiomatic) Almost everything, whether needed or not.</dd></dl>
 
 [^2]: See Wikipedia on the [usage of em dashes in AI-generated text](https://en.wikipedia.org/wiki/Dash#Usage_in_AI-generated_text) for more info.
