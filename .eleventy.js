@@ -44,8 +44,9 @@ export default function (eleventyConfig) {
     // Define Markdown behavior
     let md = new markdownIt({
         typographer: true,
+        html: true
     });
-    
+
     // Add some Markdown extensions
     md.use(markdownItAnchor);
     md.use(markdownItAbbr);
