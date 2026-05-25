@@ -148,8 +148,11 @@
         }
     }
 
+    pre, code {
+        font-family: "Roboto Mono", monospace;
+    }
+
     pre {
-        font-family: "Roboto Mono",monospace;
         overflow-x: auto;
     }
 

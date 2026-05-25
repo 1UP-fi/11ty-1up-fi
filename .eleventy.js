@@ -47,6 +47,9 @@ export default function (eleventyConfig) {
         html: true
     });
 
+    // Treat all HTML as inline for the sake of custom elements
+    md.block.ruler.disable('html_block');
+
     // Add some Markdown extensions
     md.use(markdownItAnchor);
     md.use(markdownItAbbr);
@@ -150,6 +153,11 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/favicon.ico");
 
     eleventyConfig.addTemplateFormats(["ts", "scss", "yml", "svg"]);
+
+    // Fix symbolic link to LICENSE
+    eleventyConfig.amendLibrary("liquid", liquidEngine => {
+        liquidEngine.options.root.push('.');
+    });
 
     return {
         dir: {
