@@ -47,9 +47,6 @@ export default function (eleventyConfig) {
         html: true
     });
 
-    // Treat all HTML as inline for the sake of custom elements
-    md.block.ruler.disable('html_block');
-
     // Add some Markdown extensions
     md.use(markdownItAnchor);
     md.use(markdownItAbbr);
