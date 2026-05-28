@@ -12,6 +12,7 @@ import pluginTOC from "eleventy-plugin-toc";
 import ts from "typescript";
 import YAML from "yaml";
 import markdownIt from "markdown-it";
+import slugify from "slugify";
 
 const site = YAML.parse(fs.readFileSync('./src/_data/site.yml', 'utf8'));
 
@@ -48,7 +49,7 @@ export default function (eleventyConfig) {
     });
 
     // Add some Markdown extensions
-    md.use(markdownItAnchor);
+    md.use(markdownItAnchor, {slugify: s => slugify(s, {strict: true, lower: true, remove: /^\d/})});
     md.use(markdownItAbbr);
     md.use(markdownItAttrs);
 
