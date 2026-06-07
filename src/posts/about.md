@@ -67,7 +67,7 @@ Regards, [@{{ author.bsky }}](https://bsky.app/profile/{{ author.bsky }}){: rel=
 
 > I have chosen to stick with "All rights reserved" as this site is quite personal.
 <br>
-> Specific tools available on this site may possess more relaxed licenses, if explicitly stated.
+> Specific content available on this site may possess more relaxed licenses, if explicitly stated.
 
 {% include "LICENSE.txt" %}
 
