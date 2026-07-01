@@ -3,6 +3,10 @@
 @use "colors";
 
 @layer global {
+    :root {
+        font-size: 112%;
+    }
+
     @property --theme {
         syntax: '<color>';
         initial-value: #0C9;

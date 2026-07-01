@@ -1,7 +1,7 @@
 @mixin colors {
 
     --bg: light-dark(
-        hsl(from var(--theme) h calc(s / 2) 95%),
+        hsl(from var(--theme) h calc(s / 2) 99%),
         hsl(0 0% 0%)
     );
 
@@ -11,7 +11,7 @@
     );
 
     --accent: light-dark(
-        hsl(from var(--theme) h s 30%),
+        hsl(from var(--theme) h 100% 25%),
         hsl(from var(--theme) h s 60%)
     );
 
