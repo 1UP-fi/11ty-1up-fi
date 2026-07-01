@@ -3,9 +3,6 @@
 @use "colors";
 
 @layer global {
-    :root {
-        font-size: 112%;
-    }
 
     @property --theme {
         syntax: '<color>';
@@ -22,6 +19,7 @@
     :root {
         @include colors.colors;
         scrollbar-color: var(--muted) var(--bg);
+        font-size: 112%;
     }
 
     body {
